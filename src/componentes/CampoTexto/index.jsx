@@ -34,7 +34,7 @@ const CampoTexto = (props) => {
     return (
         <ContainerEstilizado>
             <CampoTextoEstilizado {...props} />
-            <IconeLupa src={search} alt="ícone de lupa" />
+            <IconeLupa src={search} alt="Ícone de lupa"/>
         </ContainerEstilizado>
     )
 }
