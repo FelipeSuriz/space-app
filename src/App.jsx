@@ -46,7 +46,7 @@ const App = () => {
               texto="A galeria mais completa de fotos do espaço!"
               backgroundImage={bannerBackground}
             />
-            <Galeria fotos={fotosDaGaleria}/>
+            <Galeria fotos={fotosDaGaleria} />
           </ConteudoGaleria>
         </MainContainer>
       </AppContainer>
