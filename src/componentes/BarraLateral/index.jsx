@@ -25,7 +25,8 @@ const BarraLateral = () => {
                         iconeInativo="/icones/mais-vistas-inativo.png"
                     >
                         Mais vistas
-                    </ItemNavegacao><ItemNavegacao
+                    </ItemNavegacao>
+                    <ItemNavegacao
                         iconeAtivo="/icones/mais-curtidas-ativo.png"
                         iconeInativo="/icones/mais-curtidas-inativo.png"
                     >
@@ -36,7 +37,8 @@ const BarraLateral = () => {
                         iconeInativo="/icones/novas-inativo.png"
                     >
                         Novas
-                    </ItemNavegacao><ItemNavegacao
+                    </ItemNavegacao>
+                    <ItemNavegacao
                         iconeAtivo="/icones/surpreenda-me-ativo.png"
                         iconeInativo="/icones/surpreenda-me-inativo.png"
                     >
