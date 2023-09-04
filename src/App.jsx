@@ -33,12 +33,19 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `
 
-const App = () => {
-  const aoAlternarFavorito = (foto) => {
-    console.log(foto)
-  }
+const App = () => {  
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
+
+  const aoAlternarFavorito = (foto) => {
+    setFotosDaGaleria(fotosDaGaleria.map((fotosDaGaleria => {
+      return {
+        ...fotosDaGaleria,
+        favorita: fotosDaGaleria.id === foto.id ? !foto.favorita : fotosDaGaleria.favorita
+      }
+    })))
+  }
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
