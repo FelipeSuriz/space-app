@@ -33,11 +33,17 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `
 
-const App = () => {  
+const App = () => {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
 
   const aoAlternarFavorito = (foto) => {
+    if (foto.id === fotoSelecionada?.id) {
+      setFotoSelecionada({
+        ...fotoSelecionada,
+        favorita: !fotoSelecionada.favorita
+      })
+    }
     setFotosDaGaleria(fotosDaGaleria.map((fotosDaGaleria => {
       return {
         ...fotosDaGaleria,
@@ -67,6 +73,7 @@ const App = () => {
         </MainContainer>
       </AppContainer>
       <ModalZoom
+        aoAlternarFavorito={aoAlternarFavorito}
         foto={fotoSelecionada}
         aoFechar={() => setFotoSelecionada(null)}
       />
